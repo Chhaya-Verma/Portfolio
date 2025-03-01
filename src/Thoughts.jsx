@@ -25,11 +25,11 @@ const thoughtsData = [
 
 const Thoughts = () => {
   return (
-    <div className="bg-black text-white min-h-screen p-8">
-      <h1 className="text-4xl font-bold text-white">
+    <div className="bg-black text-white py-12 px-6">
+      <h1 className="text-4xl font-bold text-center">
         Design Thoughts and <span className="text-purple-500">Perspectives</span>
       </h1>
-      <div className="grid md:grid-cols-2 gap-6 mt-8">
+      <div className="grid md:grid-cols-2 gap-6 mt-8 max-w-4xl mx-auto">
         {thoughtsData.map((thought, index) => (
           <div key={index} className="bg-gray-900 rounded-xl overflow-hidden">
             <img
