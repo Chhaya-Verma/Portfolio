@@ -1,30 +1,41 @@
 import React from "react";
+import Profileimg from "./Profileimg";
+import Projects from "./Projects";
+import Tools from "./Tools";
+import Thoughts from "./Thoughts";
+import Footer from "./Footer";
 
 const LandingPage = () => {
   return (
-    <div className="bg-black text-white min-h-screen flex items-center justify-center px-6">
-      <div className="max-w-4xl flex flex-col md:flex-row items-center gap-8">
-        {/* Content Section */}
-        <div>
-          <h1 className="text-7xl font-bold">
+    <>
+      {/* Container for the left (fixed) and right (scrollable) sections */}
+      <div className="bg-black  min-h-screen flex">
+        {/* Profile Image Section (fixed on left side) */}
+        <div className="w-2/5 fixed top-0 left-0 h-full bg-black flex items-center justify-center z-10">
+          <Profileimg />
+        </div>
+
+        {/* Content Section (scrollable) */}
+        <div className="w-full ml-[40%] mr-[20%] mt-20  pl-6 pr-6 pt-32 pb-6 overflow-auto">
+          <h1 className="text-7xl text-white font-bold">
             Transforming Your Ideas into <span className="text-purple-500">Reality</span>
           </h1>
-          <p className="text-white-400 mt-2">
+          <p className="text-white mt-4">
             Passionate about creating intuitive and engaging user experiences.
             Specialize in transforming ideas into beautifully crafted products.
           </p>
 
           <div className="flex gap-8 mt-6">
             <div>
-              <h3 className="text-6xl font-bold">+12</h3>
+              <h3 className="text-6xl text-white font-bold">+12</h3>
               <p className="text-gray-400 text-lg">YEARS OF EXPERIENCE</p>
             </div>
             <div>
-              <h3 className="text-6xl font-bold">+46</h3>
+              <h3 className="text-6xl text-white font-bold">+46</h3>
               <p className="text-gray-400 text-lg">PROJECTS COMPLETED</p>
             </div>
             <div>
-              <h3 className="text-6xl font-bold">+20</h3>
+              <h3 className="text-6xl text-white  font-bold">+20</h3>
               <p className="text-gray-400 text-lg">WORLDWIDE CLIENTS</p>
             </div>
           </div>
@@ -41,7 +52,7 @@ const LandingPage = () => {
           <p className="text-white-500 mt-8">Relied on by companies near, far, and worldwide</p>
           <div className="overflow-hidden mt-2">
             {/* Logos Container */}
-            <div className="flex animate-scroll gap-6 infinite loop text-4xl font-bold">
+            <div className="flex animate-scroll text-white gap-6 infinite loop text-4xl font-bold">
               <span>Logoipsum</span>
               <span>Logoipsum</span>
               <span>Logoipsum</span>
@@ -52,8 +63,20 @@ const LandingPage = () => {
           </div>
         </div>
       </div>
-    </div>
+
+      {/* Other sections */}
+      <Projects />
+      <Tools />
+      {/* <MyWork /> */}
+      <Thoughts />
+     
+     
+    </>
   );
 };
 
 export default LandingPage;
+
+
+
+

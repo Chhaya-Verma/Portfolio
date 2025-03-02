@@ -1,15 +1,17 @@
 @import "tailwindcss";
 /* src/index.css */
 @keyframes scroll {
-    0% {
-      transform: translateX(100%); /* Start from the right */
-    }
-    100% {
-      transform: translateX(-100%); /* End at the left */
-    }
+  0% {
+    transform: translateX(0);
   }
-  
-  .animate-scroll {
-    animation: scroll 20s linear infinite; /* Adjust the time (20s) as needed */
+  100% {
+    transform: translateX(-100%);
   }
+}
+
+.animate-scroll {
+  display: flex;
+  animation: scroll 20s linear infinite; /* Adjust the time (20s) as needed */
+}
+
   

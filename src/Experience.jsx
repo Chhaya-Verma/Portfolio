@@ -43,19 +43,19 @@ const Experience = () => {
 
         {/* Content Section (scrollable) */}
         <div className="w-full ml-[40%] mr-[20%] pl-6 pr-6 pt-32 pb-6 overflow-auto">
-          <h1 className="text-5xl text-white font-bold text-center mb-10">
+          <h1 className="text-6xl text-white font-bold text-left mb-10">
             Over 12 Years of Design <span className="text-purple-500">Expertise</span>
           </h1>
           <div className="max-w-4xl mx-auto space-y-6">
             {experiences.map((exp, index) => (
               <div
                 key={index}
-                className="bg-[#28292a] p-6 rounded-xl flex justify-between items-start shadow-md"
+                className="bg-[#28292a] p-6 rounded-xl flex justify-between items-start shadow-md hover:bg-purple-600"
               >
                 <div>
-                  <h3 className="text-lg text-white font-semibold">{exp.title}</h3>
-                  <p className="text-gray-400 text-sm mt-1">{exp.description}</p>
-                  <p className="text-gray-500 text-xs mt-2">{exp.date}</p>
+                  <h3 className="text-3xl text-white font-semibold">{exp.title}</h3>
+                  <p className="text-white text-lg mt-4">{exp.description}</p>
+                  <p className="text-white text-sm mt-4">{exp.date}</p>
                 </div>
                 <div className="text-purple-500 bg-gray-800 p-3 rounded-full">
                   <FaArrowUpRightFromSquare size={18} />
