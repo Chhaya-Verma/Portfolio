@@ -1,7 +1,8 @@
 import React from "react";
 import { FaDribbble, FaTwitter, FaGithub, FaInstagram, FaEnvelope } from "react-icons/fa";
+import { ArrowUpRight } from "lucide-react";
+import FAQSection from "../components/FAQPage";
 
-// Experience data
 const experiences = [
   {
     company: "PixelForge Studios",
@@ -27,18 +28,17 @@ const experiences = [
 
 const Experience = () => {
   return (
-    <div className="bg-black min-h-screen flex flex-col md:flex-row px-4 sm:px-10">
-      {/* Profile Section */}
-      <div className="bg-[#28292a] text-white w-full md:w-[25%] lg:w-[20%] p-6 rounded-lg shadow-lg md:fixed md:left-[15%] md:top-30 md:h-[80vh] flex flex-col items-center">
+    <div className="bg-black min-h-screen flex flex-col-reverse md:flex-row px-4 sm:px-10">
+      <div className="bg-[#28292a] text-white w-full md:w-[25%] lg:w-[20%] p-6 rounded-lg shadow-lg md:fixed md:left-[15%] md:top-30 md:h-[70vh] flex flex-col items-center">
         <img
           src="https://framerusercontent.com/images/H3gQyzjQNWcYB4RqhjHgnNIOI.png?scale-down-to=600"
           alt="Profile"
           className="rounded-lg w-72 h-72 mx-auto"
         />
-        <h2 className="text-2xl font-bold mt-4">Aabraham James</h2>
-        <p className="text-gray-400">Product Designer & Developer</p>
-        <p className="text-gray-500">Istanbul, Turkey</p>
-        
+        <h2 className="text-4xl font-bold mt-4">Aabraham James</h2>
+        <p className="text-[#d1d5db] mt-3">Product Designer & Developer</p>
+        <p className="text-[#d1d5db] mt-2">Istanbul, Turkey</p>
+
         <div className="flex justify-center gap-4 mt-4">
           <FaDribbble className="text-white text-xl" />
           <FaTwitter className="text-white text-xl" />
@@ -46,29 +46,37 @@ const Experience = () => {
           <FaInstagram className="text-white text-xl" />
           <FaEnvelope className="text-white text-xl" />
         </div>
-        <button className="mt-4 bg-purple-600 px-4 py-2 rounded text-white hover:bg-purple-700">
+        <button className="mt-8 bg-purple-600 px-4 py-2 rounded text-white hover:bg-purple-700">
           Let's Talk
         </button>
       </div>
 
-      {/* Experience Section */}
-      <div className="md:ml-[40%] lg:ml-[38%] w-full md:w-[55%] py-10 overflow-y-auto">
-        <h1 className="text-4xl sm:text-5xl text-white font-bold text-center mt-10">
+      <div className="md:ml-[40%] mr-[20%] mt-15 lg:ml-[38%] w-full md:w-[55%] py-10 overflow-y-auto">
+        <h1 className="text-6xl sm:text-6xl text-white font-bold text-center mt-10">
           Over 12 Years of <span className="text-purple-500">Design Expertise</span>
         </h1>
-        
+
         <div className="flex flex-col gap-6 mt-8">
           {experiences.map((exp, index) => (
-            <div key={index} className="bg-[#1e1e1e] p-6 rounded-lg shadow-lg hover:bg-purple-900 transition duration-300">
+            <div
+              key={index}
+              className="bg-[#1e1e1e] p-6 rounded-lg shadow-lg transition duration-300 relative group hover:bg-purple-600"
+            >
               <h3 className="text-white text-xl font-semibold">{exp.company}</h3>
-              <p className="text-gray-400 mt-2">{exp.role}</p>
-              <p className="text-gray-500 mt-1">{exp.duration}</p>
+              <p className="text-[#d1d5db] mt-3">{exp.role}</p>
+              <p className="text-[#d1d5db] mt-6">{exp.duration}</p>
+
+              <button className="absolute top-4 right-4 p-3 rounded-full bg-purple-600 transition duration-300 group-hover:bg-white">
+                <ArrowUpRight className="text-white transition duration-300 group-hover:text-purple-600" />
+              </button>
             </div>
           ))}
         </div>
+        <FAQSection />
       </div>
     </div>
   );
 };
 
 export default Experience;
+
