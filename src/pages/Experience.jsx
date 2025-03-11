@@ -33,20 +33,20 @@ const Experience = () => {
         <img
           src="https://framerusercontent.com/images/H3gQyzjQNWcYB4RqhjHgnNIOI.png?scale-down-to=600"
           alt="Profile"
-          className="rounded-lg w-72 h-72 mx-auto"
+          className="rounded-lg w-67 h-80 mx-auto mt-5"
         />
         <h2 className="text-4xl font-bold mt-4">Aabraham James</h2>
-        <p className="text-[#d1d5db] mt-3">Product Designer & Developer</p>
+        <p className="text-[#d1d5db] text-xl mt-4">Product Designer & Developer</p>
         <p className="text-[#d1d5db] mt-2">Istanbul, Turkey</p>
 
-        <div className="flex justify-center gap-4 mt-4">
-          <FaDribbble className="text-white text-xl" />
+        <div className="flex justify-center gap-4 mt-6">
+          <FaDribbble className="text-white text-2xl" />
           <FaTwitter className="text-white text-xl" />
           <FaGithub className="text-white text-xl" />
           <FaInstagram className="text-white text-xl" />
           <FaEnvelope className="text-white text-xl" />
         </div>
-        <button className="mt-8 bg-purple-600 px-4 py-2 rounded text-white hover:bg-purple-700">
+        <button className="mt-15 bg-purple-600 px-4 py-2 rounded text-white hover:bg-purple-700">
           Let's Talk
         </button>
       </div>

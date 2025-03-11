@@ -309,7 +309,6 @@ import { ChevronDown } from "lucide-react";
 import { ArrowLeft, ArrowRight, ArrowUpRight } from "lucide-react";
 import HoverButton from "../components/HoverButton";
 
-
 // Tools data
 const tools = [
   { name: "SiteFlow", description: "Website Builder", image: "siteflow.png" },
