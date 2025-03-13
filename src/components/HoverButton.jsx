@@ -60,7 +60,7 @@ const HoverButton = ({ showTalk = true, showWork = true }) => {
       {/* Let's Talk Button */}
       {showTalk && (
         <button
-          className="relative overflow-hidden bg-purple-600 px-12 py-3 text-lg rounded text-white hover:bg-purple-700 h-12 w-34 flex justify-center items-center"
+          className="relative overflow-hidden bg-violet-500 px-12 py-3 text-lg rounded text-white hover:bg-purple-700 h-12 w-34 flex justify-center items-center"
           onMouseEnter={() => setHovered(true)}
           onMouseLeave={() => setHovered(false)}
           onClick={() => navigate("/contact")}

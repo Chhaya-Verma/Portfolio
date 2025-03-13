@@ -29,7 +29,7 @@ const experiences = [
 const Experience = () => {
   return (
     <div className="bg-black min-h-screen flex flex-col-reverse md:flex-row px-4 sm:px-10">
-      <div className="bg-[#28292a] text-white w-full md:w-[25%] lg:w-[20%] p-6 rounded-lg shadow-lg md:fixed md:left-[15%] md:top-30 md:h-[70vh] flex flex-col items-center">
+      <div className="bg-[#28292a] mt-7 text-white w-full md:w-[25%] lg:w-[20%] p-6 rounded-lg shadow-lg md:fixed md:left-[15%] md:top-30 md:h-[70vh] flex flex-col items-center">
         <img
           src="https://framerusercontent.com/images/H3gQyzjQNWcYB4RqhjHgnNIOI.png?scale-down-to=600"
           alt="Profile"
@@ -51,7 +51,7 @@ const Experience = () => {
         </button>
       </div>
 
-      <div className="md:ml-[40%] mr-[20%] mt-15 lg:ml-[38%] w-full md:w-[55%] py-10 overflow-y-auto">
+      <div className="md:ml-[40%] mr-[20%] mt-7 lg:ml-[38%] w-full md:w-[55%] py-10 overflow-y-auto">
         <h1 className="text-6xl sm:text-6xl text-white font-bold text-center mt-10">
           Over 12 Years of <span className="text-purple-500">Design Expertise</span>
         </h1>

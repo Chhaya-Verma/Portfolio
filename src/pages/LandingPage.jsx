@@ -473,7 +473,7 @@ const LandingPage = () => {
   return (
     <div className="bg-black min-h-screen flex flex-col md:flex-row px-4 sm:px-10">
       {/* Profile Section */}
-      <div className="bg-[#28292a] text-white w-full md:w-[25%] lg:w-[20%] p-6 rounded-lg shadow-lg md:fixed md:left-[15%] md:top-30 md:h-[70vh] flex flex-col items-center">
+      <div className="bg-neutral-800 mt-10 text-white w-full md:w-[25%] lg:w-[20%] p-6 rounded-lg shadow-lg md:fixed md:left-[15%] md:top-30 md:h-[70vh] flex flex-col items-center">
         <img
           src="https://framerusercontent.com/images/H3gQyzjQNWcYB4RqhjHgnNIOI.png"
           alt="Profile"
@@ -544,18 +544,18 @@ const LandingPage = () => {
         </p>
 
         {/* Experience and Stats */}
-        <div className="flex justify-left gap-15 mt-8 text-left">
+        <div className="flex flex-wrap justify-start gap-10 mt-8 text-left">
           <div>
-            <h2 className="text-7xl font-bold">+12</h2>
-            <p className="text-[#d1d5db] text-lg">Years of Experience</p>
+            <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold">+12</h2>
+            <p className="text-sm md:text-sm text-[#d1d5db]">Years of Experience</p>
           </div>
           <div>
-            <h2 className="text-7xl font-bold">+46</h2>
-            <p className="text-[#d1d5db] text-lg">Projects Completed</p>
+            <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold">+46</h2>
+            <p className="text-sm md:text-sm text-[#d1d5db]">Projects Completed</p>
           </div>
           <div>
-            <h2 className="text-7xl font-bold">+20</h2>
-            <p className="text-[#d1d5db] text-lg">Worldwide Clients</p>
+            <h2 className="text-4xl md:text-6xl lg:text-7xl font-bold">+20</h2>
+            <p className="text-sm md:text-sm text-[#d1d5db]">Worldwide Clients</p>
           </div>
         </div>
 
@@ -594,17 +594,29 @@ const LandingPage = () => {
           className={`mt-20 transform transition-opacity duration-700 ease-in-out ${isProjectsVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
             }`}
         >
-          <h2 className="text-7xl font-bold text-left">Recent Projects <span className="text-purple-500">and Achievements</span></h2>
+          <h2 className="text-7xl font-bold text-left">
+            Recent Projects <span className="text-purple-500">and Achievements</span>
+          </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-6">
             {projects.map((project, index) => (
-              <div key={index} className="bg-[#18191a] p-4 rounded-lg shadow-lg text-center">
-                <img src={project.image} alt={project.name} className="rounded-lg mb-4 w-full h-40 object-cover" />
-                <h3 className="text-2xl text-left">{project.name}</h3>
+              <div
+                key={index}
+                className="bg-[#18191a] p-4 rounded-lg shadow-lg text-center transition-transform duration-300 ease-in-out hover:scale-105 group"
+              >
+                <img
+                  src={project.image}
+                  alt={project.name}
+                  className="rounded-lg mb-4 w-full h-40 object-cover transition-transform duration-300 ease-in-out group-hover:scale-110"
+                />
+                <h3 className="text-2xl text-left transition-colors duration-300 ease-in-out group-hover:text-purple-400">
+                  {project.name}
+                </h3>
                 <p className="text-[#d1d5db] mt-2 text-l text-left">{project.category}</p>
               </div>
             ))}
           </div>
         </div>
+
 
         {/* Tools Section */}
         <div
@@ -652,7 +664,7 @@ const LandingPage = () => {
           {/* Testimonial Section */}
           <div
             ref={testimonialsRef}
-            className={`col-span-1 sm:col-span-1 mt-25 bg-black text-white p-6 rounded-lg shadow-lg transform transition-opacity duration-700 ease-in-out ${isTestimonialsVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+            className={`col-span-1 sm:col-span-1 mt-25 bg-[#1e1e1e] text-white p-6 rounded-lg shadow-lg transform transition-opacity duration-700 ease-in-out ${isTestimonialsVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
               }`}
           >
             <img src={testimonials[index].image} alt={testimonials[index].name} className="w-14 h-14 rounded-full" />
